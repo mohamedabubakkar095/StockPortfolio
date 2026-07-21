@@ -116,7 +116,7 @@ function Profile() {
       const token = localStorage.getItem("access");
 
       await axios.put(
-        "https://stockportfolio-backend.onrender.com/api/change-password/",,
+        "https://stockportfolio-backend.onrender.com/api/change-password/",
         {
           old_password: passwordData.old_password,
           new_password: passwordData.new_password,
