@@ -1,0 +1,295 @@
+/* Dashboard */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding-bottom: 60px;
+}
+
+.dashboard-header {
+  padding: 10px 0 20px;
+}
+
+.dashboard-header h2 {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.dashboard-header p {
+  font-size: 14px;
+}
+
+/* Cards */
+
+.dashboard-page .card {
+  transition: all 0.25s ease;
+}
+
+.dashboard-page .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Summary Cards */
+
+.summary-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Buttons */
+
+.dashboard-page button {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dashboard-page button:hover {
+  transform: translateY(-1px);
+}
+
+/* Form */
+
+.dashboard-page .form-control,
+.dashboard-page .form-select {
+  min-height: 45px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.dashboard-page .form-control:focus,
+.dashboard-page .form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Search */
+
+.dashboard-search {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* Table */
+
+.dashboard-page .table {
+  margin-bottom: 0;
+}
+
+.dashboard-page .table thead th {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.dashboard-page .table tbody td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.dashboard-page .table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.dashboard-page .table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Stock Symbol */
+
+.dashboard-page .badge {
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+/* Chart */
+
+.dashboard-chart {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 20px;
+  }
+
+  .dashboard-header > div:last-child {
+    width: 100%;
+  }
+
+  .dashboard-header button {
+    margin-bottom: 8px;
+  }
+
+}
+
+/* =========================
+   PROFESSIONAL SUMMARY CARDS
+========================= */
+
+.summary-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 25px;
+  color: white;
+  min-height: 175px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.summary-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.18);
+}
+
+.summary-card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  right: -50px;
+  top: -50px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.summary-card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: -60px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Card Backgrounds */
+
+.investment-card {
+  background: linear-gradient(
+    135deg,
+    #00b09b,
+    #96c93d
+  );
+}
+
+.current-card {
+  background: linear-gradient(
+    135deg,
+    #396afc,
+    #2948ff
+  );
+}
+
+.profit-card {
+  background: linear-gradient(
+    135deg,
+    #11998e,
+    #38ef7d
+  );
+}
+
+.loss-card {
+  background: linear-gradient(
+    135deg,
+    #ff416c,
+    #ff4b2b
+  );
+}
+
+.stocks-card {
+  background: linear-gradient(
+    135deg,
+    #434343,
+    #000000
+  );
+}
+
+
+/* Card Content */
+
+.summary-card-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.summary-label {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.summary-value {
+  margin: 0 0 10px;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.summary-status {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+
+/* Icon */
+
+.summary-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+  .summary-card {
+    min-height: 155px;
+    padding: 20px;
+  }
+
+  .summary-value {
+    font-size: 23px;
+  }
+
+  .summary-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+}

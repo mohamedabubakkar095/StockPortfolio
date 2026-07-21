@@ -10,7 +10,7 @@ class Stock(models.Model):
 
     company_name = models.CharField(max_length=100)
     symbol = models.CharField(max_length=20)
-    quantity = models.IntegerField()
+    quantity = models.PositiveIntegerField()
     buy_price = models.DecimalField(max_digits=10, decimal_places=2)
     current_price = models.DecimalField(max_digits=10, decimal_places=2)
     purchase_date = models.DateField(auto_now_add=True)
@@ -28,4 +28,4 @@ class Stock(models.Model):
         return self.current_value - self.invested_amount
 
     def __str__(self):
-        return self.symbol
+        return f"{self.company_name} ({self.symbol})"

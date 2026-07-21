@@ -1,5 +1,6 @@
 from rest_framework.permissions import IsAuthenticated
 
+
 class StockListView(generics.ListCreateAPIView):
 
     serializer_class = StockSerializer
