@@ -1,77 +1,116 @@
 # 📈 Stock Portfolio Management System
 
-A Full Stack Stock Portfolio Management Web Application built using React, Django REST Framework, and SQLite.
+A full-stack web application that helps users manage, track, and monitor their stock investments through a professional portfolio dashboard.
+
+Built using **React.js**, **Django**, and **Django REST Framework** with JWT-based authentication.
+
+---
 
 ## 🚀 Features
 
-- User Authentication (JWT)
-- Stock Management
-- Portfolio Management
-- Buy & Sell Stocks
-- Watchlist
-- Profit & Loss Tracking
-- Dashboard
-- Responsive UI
+### 🔐 User Authentication
+- User Registration
+- User Login
+- JWT Authentication
+- Protected Routes
+- Logout
+- Change Password
+
+### 📊 Portfolio Dashboard
+- Total Investment
+- Current Portfolio Value
+- Total Profit / Loss
+- Total Number of Stocks
+- Professional Dashboard UI
+- Portfolio Summary Cards
+
+### 📈 Stock Management
+- Add Stocks
+- View Stocks
+- Edit Stock Details
+- Delete Stocks
+- Search Stocks by Company Name or Symbol
+- Sort Stocks
+- Filter Profit-Making Stocks
+- Filter Loss-Making Stocks
+
+### 💰 Live Price Updates
+- Refresh Current Stock Prices
+- Fetch Latest Stock Prices using Yahoo Finance API
+- Automatically Calculate:
+  - Investment Value
+  - Current Value
+  - Profit / Loss
+
+### 👤 User Profile
+- View User Profile
+- Update Personal Information
+- Portfolio Overview
+- Total Stocks
+- Total Investment
+- Current Value
+- Total Profit
+
+### 📄 Export Features
+- Export Portfolio to Excel
+- Export Portfolio to PDF
+
+---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- React
-- Vite
+- React.js
+- JavaScript
+- Bootstrap
+- CSS
 - Axios
-- React Router DOM
+- React Router
+- React Icons
+- Vite
 
 ### Backend
+- Python
 - Django
 - Django REST Framework
+- JWT Authentication
+- yFinance
 
 ### Database
 - SQLite
+- MySQL (Optional / Production)
 
 ### Tools
 - Git
 - GitHub
 - VS Code
 
+---
+
 ## 📂 Project Structure
 
-```
+```text
 StockPortfolio/
 │
 ├── backend/
+│   ├── config/
+│   ├── portfolio/
+│   ├── manage.py
+│   └── requirements.txt
+│
 ├── frontend/
-└── README.md
-```
-
-## ⚙️ Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/mohamedabubakkar095/StockPortfolio.git
-```
-
-### Backend
-
-```bash
-cd backend
-python -m venv env
-source env/bin/activate
-pip install -r requirements.txt
-python manage.py runserver
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-## 📸 Screenshots
-
-Coming Soon...
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+├── README.md
+└── .gitignore
 
 ## 👨‍💻 Author
 
