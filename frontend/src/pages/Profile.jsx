@@ -31,7 +31,7 @@ function Profile() {
     try {
       const token = localStorage.getItem("access");
 
-      const response = await axios.get("http://127.0.0.1:8000/api/stocks/", {
+  const response = await axios.get("https://stockportfolio-backend.onrender.com/api/stocks/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ function Profile() {
     try {
       const token = localStorage.getItem("access");
 
-      const response = await axios.get("http://127.0.0.1:8000/api/profile/", {
+      const response = await axios.get("https://stockportfolio-backend.onrender.com/api/profile/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -116,7 +116,7 @@ function Profile() {
       const token = localStorage.getItem("access");
 
       await axios.put(
-        "http://127.0.0.1:8000/api/change-password/",
+        "https://stockportfolio-backend.onrender.com/api/change-password/",,
         {
           old_password: passwordData.old_password,
           new_password: passwordData.new_password,
@@ -161,7 +161,7 @@ function Profile() {
       const token = localStorage.getItem("access");
 
       const response = await axios.put(
-        "http://127.0.0.1:8000/api/profile/",
+        "https://stockportfolio-backend.onrender.com/api/profile/",
         formData,
         {
           headers: {
