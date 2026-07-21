@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import API from "../services/api";
+import API from "../services/Api";
 import PortfolioChart from "../components/PortfolioChart";
 import { toast } from "react-toastify";
 import "./Dashboard.css";
