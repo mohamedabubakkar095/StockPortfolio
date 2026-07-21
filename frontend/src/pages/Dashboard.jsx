@@ -781,17 +781,6 @@ const lossStocks = stocks.filter(
                     })
                   )}
                 </tbody>
-
-                <div className="card border-0 shadow-sm rounded-4 overflow-hidden">
-  <div className="card-body p-0">
-
-    <div className="table-responsive">
-     
-    </div>
-
-  </div>
-</div>
-
               </table>
             </div>
           )}
