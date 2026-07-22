@@ -31,7 +31,7 @@ function Profile() {
     try {
       const token = localStorage.getItem("access");
 
-  const response = await axios.get("https://stockportfolio-backend.onrender.com/api/stocks/", {
+  const response = await axios.get("https://stockportfolio-gm75.onrender.com/api/profile/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
