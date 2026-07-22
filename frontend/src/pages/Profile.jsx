@@ -28,20 +28,24 @@ function Profile() {
   }, []);
 
   const fetchStocks = async () => {
-    try {
-      const token = localStorage.getItem("access");
+  try {
+    const token = localStorage.getItem("access");
 
-  const response = await axios.get("https://stockportfolio-gm75.onrender.com/api/profile/", {
+    const response = await axios.get(
+      "https://stockportfolio-gm75.onrender.com/api/stocks/",
+      {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      });
+      }
+    );
 
-      setStocks(response.data);
-    } catch (error) {
-      console.error("Stocks Error:", error);
-    }
-  };
+    setStocks(Array.isArray(response.data) ? response.data : []);
+  } catch (error) {
+    console.error("Stocks Error:", error);
+    setStocks([]);
+  }
+};
 
   // Portfolio Calculations
   const totalStocks = stocks.length;

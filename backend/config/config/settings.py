@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "stockportfolio-gm75.onrender.com",
     "localhost",
-    "127.0.0.1",
+    "127.0.0.1:8000",
 ]
 
 
