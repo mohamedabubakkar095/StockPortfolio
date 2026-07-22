@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
- baseURL: "https://stockportfolio-backend.onrender.com/api/",
+ baseURL: "https://stockportfolio-gm75.onrender.com/api/",
 });
 
 API.interceptors.request.use(
