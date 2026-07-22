@@ -13,6 +13,7 @@ from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.permissions import AllowAny
 
 from .models import Stock
 from .serializers import RegisterSerializer, StockSerializer
@@ -114,10 +115,10 @@ class StockDetailView(generics.RetrieveUpdateDestroyAPIView):
     def get_queryset(self):
         return Stock.objects.filter(user=self.request.user)
 
-
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
+    permission_classes = [AllowAny]
 
 
 class ProfileView(APIView):
