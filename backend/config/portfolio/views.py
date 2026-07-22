@@ -96,7 +96,6 @@ class PasswordChangeView(APIView):
             "message": "Password changed successfully"
         })
 
-
 class StockListView(generics.ListCreateAPIView):
     serializer_class = StockSerializer
     permission_classes = [IsAuthenticated]
@@ -126,6 +125,7 @@ class ProfileView(APIView):
 
     def get(self, request):
         user = request.user
+
         return Response({
             "id": user.id,
             "username": user.username,
@@ -135,6 +135,36 @@ class ProfileView(APIView):
             "date_joined": user.date_joined,
         })
 
+    def put(self, request):
+        user = request.user
+
+        user.first_name = request.data.get(
+            "first_name",
+            user.first_name
+        )
+
+        user.last_name = request.data.get(
+            "last_name",
+            user.last_name
+        )
+
+        user.email = request.data.get(
+            "email",
+            user.email
+        )
+
+        user.save()
+
+        return Response({
+            "message": "Profile updated successfully",
+            "user": {
+                "id": user.id,
+                "username": user.username,
+                "email": user.email,
+                "first_name": user.first_name,
+                "last_name": user.last_name,
+            }
+        })
 
 class RefreshPriceView(APIView):
     permission_classes = [IsAuthenticated]
